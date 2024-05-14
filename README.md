@@ -1,5 +1,4 @@
-# Windows-basic-commands-batchscript
-Ex08-Windows-basic-commands-batchscript
+# EX08 Windows-basic-commands-batchscript
 
 # AIM:
 To execute Windows basic commands and batch scripting
@@ -27,62 +26,77 @@ Execute the necessary commands/batch file for the desired output.
 ## Exercise 1: Basic Directory and File Operations
 Create a directory named "MyLab" on the desktop.
 
-## COMMAND AND OUTPUT
+
+## COMMAND AND OUTPUT:
+```
+mkdir %userprofile%\Desktop\MyLab
+```
+![mkdir](https://github.com/karthick-V-212223040086/Windows-basic-commands-batchscript/assets/149037461/e82e2f99-bead-4ce0-a456-acc495de960e)
+
 
 Change to the "MyLab" directory and create an empty text file named "MyFile.txt" inside it.
 
 
-mkdir %userprofile%\Desktop\MyLab
+## COMMAND AND OUTPUT:
+```
+cd %userprofile%\Desktop\MyLab
+```
+![cd](https://github.com/karthick-V-212223040086/Windows-basic-commands-batchscript/assets/149037461/072bf08b-8f1f-47e7-9ce0-4bd5389e5e43)
 
-![image](https://github.com/ZafreenJagir/Windows-basic-commands-batchscript/assets/144870573/bae51f75-f6cf-48cf-b0e6-fbb3b6bdfa39)
+
+```
+type nul > MyFile.txt
+```
+
+![myfile](https://github.com/karthick-V-212223040086/Windows-basic-commands-batchscript/assets/149037461/72daf233-97b8-4bab-829b-4e43929a4fb1)
 
 
 
-## COMMAND AND OUTPUT
 
 List the contents of the "MyLab" directory.
 
-cd %userprofile%\Desktop\MyLab
 
-![image](https://github.com/ZafreenJagir/Windows-basic-commands-batchscript/assets/144870573/3fda6e27-edc8-4f39-a96c-5e49ee9103f5)
+## COMMAND AND OUTPUT:
+```
+dir %userprofile%\Desktop\MyLab
+```
+![dir](https://github.com/karthick-V-212223040086/Windows-basic-commands-batchscript/assets/149037461/ffa2b94b-cc47-478d-aaaf-e07201189f9f)
 
-
-![image](https://github.com/ZafreenJagir/Windows-basic-commands-batchscript/assets/144870573/ee8aaf6a-bbaa-494f-b30c-1490967b620d)
-
-
-
-## COMMAND AND OUTPUT
 
 Copy "MyFile.txt" to a new folder named "Backup" on the desktop.
 
+## COMMAND AND OUTPUT:
+```
+mkdir %userprofile%\Desktop\Backup
+```
+![backup](https://github.com/karthick-V-212223040086/Windows-basic-commands-batchscript/assets/149037461/b398f90e-ae0b-4acd-9f4c-f61ecfe8cb82)
 
-dir %userprofile%\Desktop\MyLab
+```
+copy MyFile.txt %userprofile%\Desktop\Backup
+```
+![copy](https://github.com/karthick-V-212223040086/Windows-basic-commands-batchscript/assets/149037461/98ab3063-d62a-4eb1-96a3-444a8d8aff5d)
 
-![image](https://github.com/ZafreenJagir/Windows-basic-commands-batchscript/assets/144870573/de4c5ce3-8d4b-4b95-bef5-667a1dd3f35e)
 
-
-## COMMAND AND OUTPUT
 
 Move the "MyLab" directory to the "Documents" folder.
 
 
-mkdir %userprofile%\Desktop\Backup
-copy MyFile.txt %userprofile%\Desktop\Backup
+## COMMAND AND OUTPUT:
+```
+mkdir %userprofile%\Desktop\Documents
 
-![image](https://github.com/ZafreenJagir/Windows-basic-commands-batchscript/assets/144870573/4386bf12-e3e7-49f5-a345-0456eefe6d83)
-
-
-## COMMAND AND OUTPUT
-
-mv Myfile.txt %userprofile%\Documents
-
-![image](https://github.com/ZafreenJagir/Windows-basic-commands-batchscript/assets/144870573/256237bb-c5f7-40ec-a572-34a301827cff)
+move MyLab Documents
+```
+![move](https://github.com/karthick-V-212223040086/Windows-basic-commands-batchscript/assets/149037461/342ac881-4ac9-4c2f-a6a0-cdc37248f16c)
 
 
 ## Exercise 2: Advanced Batch Scripting
 Create a batch script named "BackupScript.bat" that creates a backup of files with the ".docx" extension from the "Documents" folder to a new folder named "DocBackup" on the desktop.
 
 
+
+
+## COMMAND:
 ```
 @echo off
 mkdir %userprofile%\Desktop\DocBackup
@@ -91,23 +105,20 @@ echo Backup completed successfully!
 ```
 
 
+## OUTPUT:
+![batch1](https://github.com/karthick-V-212223040086/Windows-basic-commands-batchscript/assets/149037461/c6377772-a55f-4d77-9d2c-78ea30ece3d9)
+
+
+## COMMAND:
 ```
 @echo off
 mkdir %userprofile%\Desktop\DocBackup
 copy %userprofile%\Documents\*.docx %userprofile%\Desktop\DocBackup
 del %userprofile%\Documents\*.docx
 echo Backup and deletion completed successfully!
-
 ```
-
-
-
-## OUTPUT
-
-![image](https://github.com/ZafreenJagir/Windows-basic-commands-batchscript/assets/144870573/6e279804-b748-4593-a7b7-a9fbe3b6f227)
-
-
-
+## OUTPUT:
+![modified batch1](https://github.com/karthick-V-212223040086/Windows-basic-commands-batchscript/assets/149037461/777c22b5-a3b1-444f-ad7a-045c05cd0d9c)
 
 # RESULT:
 The commands/batch files are executed successfully.
